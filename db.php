@@ -1,5 +1,8 @@
 <?php
-
-$conexion=mysqli_connect("localhost","root","","db_login");
+$host = getenv('DB_HOST');
+$dbname = getenv('DB_NAME');
+$user = getenv('USERNAME');
+$password = getenv('PASSWORD');
+$conexion=mysqli_connect($host,$user,$password,$dbname);
 
 ?>
